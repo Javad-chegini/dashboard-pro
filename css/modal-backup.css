@@ -1,0 +1,166 @@
+.advanced-settings {
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    padding: 15px;
+    background-color: #f8f9fa;
+}
+
+.fade-in {
+    animation: fadeIn 0.3s ease-in;
+}
+
+.form-check-input:checked {
+    background-color: var(--primary-blue);
+    border-color: var(--primary-blue);
+}
+
+.form-control, .form-select {
+    border-radius: 8px;
+    border: 2px solid #e9ecef;
+    padding: 10px 15px;
+    transition: all 0.3s ease;
+}
+
+.form-control:focus, .form-select:focus {
+    border-color: var(--primary-blue);
+    box-shadow: 0 0 0 0.2rem rgba(0, 102, 204, 0.25);
+}
+
+.form-label {
+    color: var(--dark-blue);
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.form-select {
+    direction: rtl;
+    text-align: right;
+    padding-right: 35px !important;
+    padding-left: 15px !important;
+    background-position: left 12px center !important;
+}
+
+.modal-body {
+    padding: 2rem;
+}
+
+.modal-content {
+    direction: rtl;
+    text-align: right;
+}
+
+.modal-footer {
+    border: none;
+    padding: 1rem 2rem 2rem;
+}
+
+.modal-title {
+    padding-left: 50px;
+    width: 100%;
+    color: #e9ecef;
+}
+
+.tables-section {
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    padding: 15px;
+    background-color: #f8f9fa;
+}
+
+.advanced-settings .form-check {
+    margin-bottom: 10px;
+}
+
+.backup-preview .alert {
+    border-left: 4px solid #17a2b8;
+}
+
+.backup-type-section .btn-group .btn {
+    border-radius: 0.375rem !important;
+    margin: 0 3px;
+}
+
+.backup-type-section .btn-group .btn i {
+    margin-left: 0.5rem !important;
+    margin-right: 0 !important;
+}
+
+.btn-sm i {
+    margin-left: 5px !important;
+}
+
+.form-select option {
+    text-align: right;
+    direction: rtl;
+    padding-right: 15px;
+}
+
+.modal-footer .btn i, .modal-title i {
+    margin-left: 8px;
+    margin-right: 0;
+}
+
+.modal-header .btn-close {
+    position: absolute;
+    left: 15px !important;
+    top: 50%;
+    transform: translateY(-50%);
+    right: auto !important;
+    margin: 0 !important;
+}
+
+.progress-section .progress {
+    height: 25px;
+}
+
+.progress-section .progress-bar {
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.tables-section .form-check {
+    margin-bottom: 8px;
+}
+
+.tables-section .form-check-label {
+    cursor: pointer;
+    padding: 5px 10px;
+    border-radius: 4px;
+    transition: background-color 0.2s ease;
+}
+
+.tables-section .form-check-label:hover {
+    background-color: #e9ecef;
+}
+
+#backupModal .modal-content {
+    direction: rtl;
+    text-align: right;
+    border-radius: 15px;
+}
+
+#backupModal .modal-header {
+    border-radius: 15px 15px 0 0;
+    background: linear-gradient(135deg, #28a745, #20c997) !important;
+    color: white;
+}
+
+#backupModal .modal-header .btn-close {
+    position: absolute;
+    left: 15px !important;
+    top: 50%;
+    transform: translateY(-50%);
+    filter: invert(1);
+}
+
+#backupModal .modal-title {
+    padding-left: 50px;
+    width: 100%;
+}
+
+
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}

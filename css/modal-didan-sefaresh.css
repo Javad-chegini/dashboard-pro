@@ -1,0 +1,39 @@
+.info-item {
+    margin-bottom: 15px;
+}
+
+.info-item label {
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.info-item p {
+    font-size: 1rem;
+    margin-bottom: 0;
+    padding: 8px 12px;
+    background-color: #f8f9fa;
+    border-radius: 6px;
+    border: 1px solid #e9ecef;
+}
+
+#viewOrderModal .alert {
+    border-radius: 8px;
+}
+
+#viewOrderModal .modal-body {
+    max-height: 70vh;
+    overflow-y: auto;
+}
+
+
+
+@media (max-width: 768px) {
+    #viewOrderModal .modal-dialog {
+        margin: 10px;
+    }
+    .info-item p {
+        font-size: 0.9rem;
+        padding: 6px 10px;
+    }
+}
