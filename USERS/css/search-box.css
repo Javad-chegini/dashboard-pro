@@ -1,0 +1,75 @@
+#statusFilter, #roleFilter {
+    text-align-last: right;
+    direction: rtl;
+    padding-right: 12px;
+    padding-left: 40px;
+}
+
+.form-select {
+    background-position: left 0.75rem center;
+}
+
+.input-group .btn-outline-primary {
+    border-right: none;
+    border-radius: 8px 0 0 8px !important;
+    border-color: #ced4da;
+}
+
+.input-group .btn-outline-primary:hover {
+    border-color: var(--primary-blue);
+    background-color: var(--primary-blue);
+}
+
+.input-group .form-control {
+    border-left: none;
+    border-radius: 0 8px 8px 0 !important;
+}
+
+.input-group .form-control:focus {
+    border-color: var(--primary-blue);
+    box-shadow: none;
+}
+
+.input-group .form-control:focus + .btn-outline-primary {
+    border-color: var(--primary-blue);
+}
+
+.table-card .col-md-6 {
+    flex: none;
+    width: auto;
+}
+
+.table-card .row.align-items-center.mb-3 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.table-card .text-left {
+    text-align: left !important;
+}
+
+.table-card .text-left {
+    text-align: left !important;
+}
+
+#statusFilter option, #roleFilter option {
+    direction: rtl;
+    text-align: right;
+    padding-right: 10px;
+}
+
+
+
+@media (max-width: 768px) {
+    .table-card .text-left {
+        text-align: left !important;
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 500px) {
+    .btn-text {
+        display: none;
+    }
+}
