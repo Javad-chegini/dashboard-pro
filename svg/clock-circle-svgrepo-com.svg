@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg width="40px" height="40px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- دایره پس‌زمینه ساعت -->
+  <path d="M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12Z" fill="#1C274C"/>
+  
+  <!-- گروه عقربه‌ها که دور مرکز می‌چرخن -->
+  <g transform-origin="12 12">
+    <!-- عقربه کوتاه (ساعت) - ۱۲ ثانیه یک دور -->
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M12 9C12.4142 9 12.75 9.33579 12.75 9.75V11.6893L13.5 12.4393C13.7929 12.7322 13.7929 13.207 13.5 13.4999C13.2071 13.7928 12.7322 13.7928 12.4393 13.5L11.4393 12.5C11.2986 12.3594 11.25 12.1686 11.25 11.9393V9.75C11.25 9.33579 11.5858 9 12 9Z" fill="white">
+      <animateTransform
+        attributeName="transform"
+        attributeType="XML"
+        type="rotate"
+        from="0 12 12"
+        to="360 12 12"
+        dur="12s"
+        repeatCount="indefinite"/>
+    </path>
+    
+    <!-- عقربه بلند (دقیقه) - بلندتر شده - ۸ ثانیه یک دور -->
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M12 5.5C12.4142 5.5 12.75 5.83579 12.75 6.25V11.6893L16.0303 14.9697C16.3232 15.2626 16.3232 15.7374 16.0303 16.0303C15.7374 16.3232 15.2626 16.3232 15.9697 16.0303L11.4697 12.5303C11.329 12.3897 11.25 12.1989 11.25 12V6.25C11.25 5.83579 11.5858 5.5 12 5.5Z" fill="white" opacity="0.8">
+      <animateTransform
+        attributeName="transform"
+        attributeType="XML"
+        type="rotate"
+        from="0 12 12"
+        to="360 12 12"
+        dur="8s"
+        repeatCount="indefinite"/>
+    </path>
+    
+    <!-- عقربه ثانیه (قرمز و بلندتر) -->
+    <line x1="12" y1="12" x2="12" y2="4.5" stroke="red" stroke-width="1" opacity="0.7">
+      <animateTransform
+        attributeName="transform"
+        attributeType="XML"
+        type="rotate"
+        from="0 12 12"
+        to="360 12 12"
+        dur="4s"
+        repeatCount="indefinite"/>
+    </line>
+  </g>
+  
+  <!-- نقطه مرکزی ساعت -->
+  <circle cx="12" cy="12" r="1.5" fill="white" opacity="0.9"/>
+</svg>
