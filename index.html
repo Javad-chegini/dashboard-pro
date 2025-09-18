@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>پنل مدیریت</title>  
+    <link rel="shortcut icon" href="svg/admin-svgrepo-com.svg" type="image/pannel-icon">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/fontawesome/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/table-sefareshat-akhir.css">
+</head>
+<body>
+    <div class="sidebar">
+        <div class="logo">
+            <h3><img src="svg/speed-svgrepo-com.svg" alt=""> پنل مدیریت</h3>
+        </div>
+        <ul class="sidebar-nav">
+            <li><a href="#dashboard" class="active"><i class="fas fa-home"></i> داشبورد</a></li>
+            <li><a href="./USERS/index.html"><i class="fas fa-users"></i> کاربران</a></li>
+            <li><a href="PRODUCT/index.html"><i class="fas fa-box"></i> محصولات</a></li>
+            <li><a href="ORDER/index.html"><i class="fas fa-shopping-cart"></i> سفارشات</a></li>
+            <li><a href="ANALITYCS/index.html"><i class="fas fa-chart-bar"></i> آمار و گزارش</a></li>
+            <li><a href="MESSAGES/index.html"><i class="fas fa-envelope"></i> پیام‌ها</a></li>
+            <li><a href="SETTING/index.html"><i class="fas fa-cog"></i> تنظیمات</a></li>
+            <li><a href="PROFILE/index.html"><i class="fas fa-user"></i> پروفایل</a></li>
+        </ul>
+    </div>
+    <div class="main-content">
+        <div class="header d-flex justify-content-between align-items-center">
+            <div class="d-flex align-items-center">
+                <button class="btn btn-outline-primary d-xl-none me-3 icon-spacing" id="sidebarToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <h2>داشبورد</h2>
+            </div>
+            <div class="d-flex align-items-center">
+                <span class="me-3 title-hide">خوش آمدید، مدیر</span>
+                <div class="dropdown x">
+                    <button class="btn btn-outline-primary dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                        <i class="fas fa-user"></i>
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-end text-end">
+                        <li><a class="dropdown-item text-end" href="#"><i class="fas fa-user ms-2"></i> پروفایل</a></li>
+                        <li><a class="dropdown-item text-end" href="#"><i class="fas fa-cog ms-2"></i> تنظیمات</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item text-end" href="#"><i class="fas fa-sign-out-alt ms-2"></i> خروج</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">    
+            <div class="stats-section">
+                <div class="stats-header">
+                    <h5><img src="svg/chart-bar-svgrepo-com.svg" alt="" class="icon-spacing">آمار کلی سیستم</h5>
+                    <button class="btn btn-sm btn-outline-secondary toggle-stats" id="toggleStats">
+                        <i class="fas fa-chevron-up"></i>
+                    </button>
+                </div>
+                <div class="stats-content" id="statsContent">
+                    <div class="row g-2">
+                        <div class="col-6 col-sm-6 col-md-6 col-xl-3">
+                            <div class="stat-card users" style="transform: translateY(0px);">
+                                <div class="stat-icon">
+                                    <i class="fas fa-users"></i>
+                                </div>
+                                <div class="stat-info">
+                                    <h4>1,250</h4>
+                                    <span>کاربران فعال</span>
+                                    <small class="text-success">+5.2% از دیروز</small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6 col-sm-6 col-md-6 col-xl-3">
+                            <div class="stat-card orders" style="transform: translateY(0px);">
+                                <div class="stat-icon">
+                                    <i class="fas fa-shopping-cart"></i>
+                                </div>
+                                <div class="stat-info">
+                                    <h4>850</h4>
+                                    <span>سفارشات امروز</span>
+                                    <small class="text-success">+12.8% از دیروز</small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6 col-sm-6 col-md-6 col-xl-3">
+                            <div class="stat-card revenue" style="transform: translateY(0px);">
+                                <div class="stat-icon">
+                                    <i class="fas fa-coins"></i>
+                                </div>
+                                <div class="stat-info">
+                                    <h4>25,000</h4>
+                                    <span>درآمد امروز (هزار تومان)</span>
+                                    <small class="text-success">+8.4% از دیروز</small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6 col-sm-6 col-md-6 col-xl-3">
+                            <div class="stat-card growth" style="transform: translateY(0px);">
+                                <div class="stat-icon">
+                                    <i class="fas fa-chart-line"></i>
+                                </div>
+                                <div class="stat-info">
+                                    <h4>12.5%</h4>
+                                    <span>رشد فروش ماهانه</span>
+                                    <small class="text-success">+2.1% از ماه قبل</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>                
+            </div>
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="table-card">
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <h5><img src="svg/menu-svgrepo-com.svg" alt="آیکون-منو"> سفارشات اخیر</h5>
+                            <button class="btn btn-primary btn-sm lazy-load-modal" 
+                                    data-bs-target="#newOrderModal" 
+                                    data-js-src="js/modal-sefaresh-jadid.js" 
+                                    data-css-src="css/modal-sefaresh-jadid.css"
+                                    data-html-src="html Modal/new-order-Modal.html"
+                                    data-html-container="#modals-container">
+                            <i class="fas fa-plus me-1"></i> سفارش جدید
+                            </button>
+                        </div>
+                        <div class="table-responsive">
+                            <table class="table table-hover">
+                                <thead>
+                                    <tr>
+                                        <th>شماره سفارش</th>
+                                        <th>نام مشتری</th>
+                                        <th>محصول</th>
+                                        <th>مبلغ</th>
+                                        <th>وضعیت</th>
+                                        <th>عملیات</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>#1001</td>
+                                        <td>علی احمدی</td>
+                                        <td>لپ تاپ</td>
+                                        <td>15,000,000 تومان</td>
+                                        <td><span class="badge bg-success">تایید شده</span></td>
+                                        <td>
+                                            <button class="btn btn-sm btn-outline-primary me-1 lazy-load-modal" 
+                                                    data-order-id="#1001"
+                                                    data-bs-target="#viewOrderModal" 
+                                                    data-js-src="js/modal-didan-sefaresh.js" 
+                                                    data-css-src="css/modal-didan-sefaresh.css"
+                                                    data-html-src="html Modal/view-order-Modal.html"
+                                                    data-html-container="#modals-container">
+                                                <i class="fas fa-eye"></i>
+                                            </button>
+                                            <button class="btn btn-sm btn-outline-warning lazy-load-modal" 
+                                                    data-order-id="#1001"
+                                                    data-bs-target="#editOrderModal" 
+                                                    data-js-src="js/modal-virayesh-sefaresh.js" 
+                                                    data-css-src="css/modal-virayesh-sefaresh.css"
+                                                    data-html-src="html Modal/edit-order-Modal.html"
+                                                    data-html-container="#modals-container">
+                                                <i class="fas fa-edit"></i>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>#1002</td>
+                                        <td>فاطمه رضایی</td>
+                                        <td>موبایل</td>
+                                        <td>8,000,000 تومان</td>
+                                        <td><span class="badge bg-warning">در انتظار</span></td>
+                                        <td>
+                                            <button class="btn btn-sm btn-outline-primary me-1 lazy-load-modal" 
+                                                    data-order-id="#1002"
+                                                    data-bs-target="#viewOrderModal" 
+                                                    data-js-src="js/modal-didan-sefaresh.js" 
+                                                    data-css-src="css/modal-didan-sefaresh.css"
+                                                    data-html-src="html Modal/view-order-Modal.html"
+                                                    data-html-container="#modals-container">
+                                                <i class="fas fa-eye"></i>
+                                            </button>
+                                            <button class="btn btn-sm btn-outline-warning lazy-load-modal" 
+                                                    data-order-id="#1002"
+                                                    data-bs-target="#editOrderModal" 
+                                                    data-js-src="js/modal-virayesh-sefaresh.js" 
+                                                    data-css-src="css/modal-virayesh-sefaresh.css"
+                                                    data-html-src="html Modal/edit-order-Modal.html"
+                                                    data-html-container="#modals-container">
+                                                <i class="fas fa-edit"></i>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>#1003</td>
+                                        <td>محمد صادقی</td>
+                                        <td>تبلت</td>
+                                        <td>3,500,000 تومان</td>
+                                        <td><span class="badge bg-info">آماده ارسال</span></td>
+                                        <td>
+                                            <button class="btn btn-sm btn-outline-primary me-1 lazy-load-modal" 
+                                                    data-order-id="#1003"
+                                                    data-bs-target="#viewOrderModal" 
+                                                    data-js-src="js/modal-didan-sefaresh.js" 
+                                                    data-css-src="css/modal-didan-sefaresh.css"
+                                                    data-html-src="html Modal/view-order-Modal.html"
+                                                    data-html-container="#modals-container">
+                                                <i class="fas fa-eye"></i>
+                                            </button>
+                                            <button class="btn btn-sm btn-outline-warning lazy-load-modal" 
+                                                    data-order-id="#1003"
+                                                    data-bs-target="#editOrderModal" 
+                                                    data-js-src="js/modal-virayesh-sefaresh.js" 
+                                                    data-css-src="css/modal-virayesh-sefaresh.css"
+                                                    data-html-src="html Modal/edit-order-Modal.html"
+                                                    data-html-container="#modals-container">
+                                                <i class="fas fa-edit"></i>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="quick-actions">
+                        <h5><img src="svg/bolt-fill-svgrepo-com.svg" alt="آیکون-سریع" class="icon-spacing"> اقدامات سریع</h5>
+                        <button class="btn btn-primary quick-action-btn lazy-load-modal" 
+                                data-bs-target="#addUserModal"
+                                data-js-src="js/modal-add-karbar.js"
+                                data-css-src="css/modal-add-karbar.css"
+                                data-html-src="html Modal/Modal-add-karbar.html"
+                                data-html-container="#modals-container">
+                        <i class="fas fa-user-plus me-2 icon-spacing"></i> افزودن کاربر جدید
+                        </button>
+                        <button class="btn btn-outline-primary quick-action-btn lazy-load-modal"
+                            data-bs-target="#addProductModal"
+                            data-js-src="js/modal-add-mahsool.js"
+                            data-css-src="css/modal-add-mahsool.css"
+                            data-html-src="html Modal/Modal-add-mahsool.html"
+                            data-html-container="#modals-container">
+                        <i class="fas fa-box me-2 icon-spacing"></i> افزودن محصول جدید
+                        </button>
+                        <button class="btn btn-outline-primary quick-action-btn lazy-load-modal"
+                            data-bs-target="#editProductModal"
+                            data-js-src="js/modal-virayesh-mahsool.js"
+                            data-css-src="css/modal-virayesh-mahsool.css"
+                            data-html-src="html Modal/modal-virayesh-mahsool.html"
+                            data-html-container="#modals-container">
+                        <i class="fas fa-edit me-2 icon-spacing"></i> ویرایش محصول
+                        </button>                        
+                        <button class="btn btn-outline-primary quick-action-btn lazy-load-modal" 
+                                data-bs-target="#sendGroupMessageModal" 
+                                data-js-src="js/modal-ersal-payam-grohi.js" 
+                                data-css-src="css/modal-ersal-payam-grouhi.css"
+                                data-html-src="html Modal/modal-ersal-payam-grouhi.html"
+                                data-html-container="#modals-container"> 
+                        <i class="fas fa-envelope me-2 icon-spacing"></i> ارسال پیام گروهی
+                        </button>
+                        <button class="btn btn-outline-primary quick-action-btn lazy-load-modal" 
+                                data-bs-target="#backupModal" 
+                                data-js-src="js/modal-backup.js" 
+                                data-css-src="css/modal-backup.css"
+                                data-html-src="html Modal/modal-backup.html"
+                                data-html-container="#modals-container">
+                         <i class="fas fa-database me-2 icon-spacing"></i> پشتیبان گیری
+                        </button>                        
+                    </div>
+                    
+                    <div class="quick-actions mt-4">
+                        <h5><i class="fas fa-clock me-2"></i> فعالیت‌های اخیر</h5>
+                        <div class="activity-item border-bottom pb-2 mb-2">
+                            <small class="text-muted">10 دقیقه پیش</small>
+                            <p class="mb-0">سفارش جدید از علی احمدی دریافت شد</p>
+                        </div>
+                        <div class="activity-item border-bottom pb-2 mb-2">
+                            <small class="text-muted">25 دقیقه پیش</small>
+                            <p class="mb-0">محصول جدید به انبار اضافه شد</p>
+                        </div>
+                        <div class="activity-item border-bottom pb-2 mb-2">
+                            <small class="text-muted">1 ساعت پیش</small>
+                            <p class="mb-0">کاربر جدید ثبت نام کرد</p>
+                        </div>
+                        <div class="activity-item">
+                            <small class="text-muted">2 ساعت پیش</small>
+                            <p class="mb-0">بک آپ سیستم با موفقیت انجام شد</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="modals-container"></div>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.jsو"></script>
+    <script>
+    document.getElementById('sidebarToggle').addEventListener('click', function() {
+        document.querySelector('.sidebar').classList.toggle('show');
+    });
+    document.querySelectorAll('.sidebar-nav a').forEach(link => {
+        link.addEventListener('click', function() {
+            document.querySelectorAll('.sidebar-nav a').forEach(l => l.classList.remove('active'));
+            this.classList.add('active');
+        });
+    });
+    document.addEventListener('click', function(event) {
+        const sidebar = document.querySelector('.sidebar');
+        const sidebarToggle = document.getElementById('sidebarToggle');
+        
+        // تغییر شرط از 768 به 1200
+        if (window.innerWidth <= 1200 && !sidebar.contains(event.target) && event.target !== sidebarToggle) {
+            sidebar.classList.remove('show');
+        }
+    });   
+    </script>
+    <script src="js/layzy-load.js"></script>
+    <script src="js/rotate-amar.js"></script>
+</body>
+</html>
