@@ -1,0 +1,1132 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>محصولات - پنل مدیریت</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/fontawesome/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="./css/searchbox.css">
+    <link rel="stylesheet" href="./css/table.css">
+    <link rel="stylesheet" href="./css/edit-product-modal.css">
+    <link rel="stylesheet" href="./css/view-product-modal.css">
+    <link rel="stylesheet" href="./css/edit-product-modal.css">
+    <link rel="stylesheet" href="./css/add-mahsool.css">
+</head>
+<body>
+    <!-- Sidebar -->
+    <div class="sidebar offcanvas offcanvas-end"
+    tabindex="-1"
+    id="offcanvasSidebar"
+    aria-labelledby="offcanvasSidebarLabel"
+    data-bs-backdrop="true"
+    data-bs-scroll="false">
+        <div class="offcanvas-header">
+            <div class="logo w-100">
+                <h3 id="offcanvasSidebarLabel"><img src="../svg/speed-svgrepo-com.svg" alt=""> پنل مدیریت</h3>
+            </div>
+        </div>
+        <div class="offcanvas-body p-0">
+            <ul class="sidebar-nav">
+                <li><a href="../index.html"><i class="fas fa-home"></i> داشبورد</a></li>
+                <li><a href="../USERS/index.html"><i class="fas fa-users"></i> کاربران</a></li>
+                <li><a href="#" class="active"><i class="fas fa-box"></i> محصولات</a></li>
+                <li><a href="../ORDER/index.html"><i class="fas fa-shopping-cart"></i> سفارشات</a></li>
+                <li><a href="../ANALITYCS/index.html"><i class="fas fa-chart-bar"></i> آمار و گزارش</a></li>
+                <li><a href="../MESSAGES/index.html"><i class="fas fa-envelope"></i> پیام‌ها</a></li>
+                <li><a href="../SETTING/index.html"><i class="fas fa-cog"></i> تنظیمات</a></li>
+                <li><a href="../PROFILE/index.html"><i class="fas fa-user"></i> پروفایل</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <!-- Header -->
+        <div class="header d-flex justify-content-between align-items-center">
+            <div class="d-flex align-items-center">
+                <button class="btn btn-outline-primary me-3 d-block d-custom-none icon-spacing" id="sidebarToggle" data-bs-toggle="offcanvas" data-bs-target="#offcanvasSidebar">
+                    <i class="fas fa-bars"></i>
+                </button> 
+                <h2>محصولات</h2>
+            </div>
+            <div class="d-flex align-items-center">
+                <span class="me-3 title-hide">خوش آمدید، مدیر</span>
+                <div class="dropdown x">
+                    <button class="btn btn-outline-primary dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                        <i class="fas fa-user"></i>
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-end text-end">
+                        <li><a class="dropdown-item text-end" href="#"><i class="fas fa-user ms-2"></i> پروفایل</a></li>
+                        <li><a class="dropdown-item text-end" href="#"><i class="fas fa-cog ms-2"></i> تنظیمات</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item text-end" href="#"><i class="fas fa-sign-out-alt ms-2"></i> خروج</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Products Container -->
+        <div class="container-fluid px-4">
+            <!-- Stats Cards -->
+            <div class="row mb-4">
+                <div class="col-xl-3 col-md-6 mb-3">
+                    <div class="stat-card products">
+                        <div class="stat-icon">
+                            <i class="fas fa-boxes"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h4>2,450</h4>
+                            <small>کل محصولات</small>
+                            <span class="text-success">
+                                <i class="fas fa-arrow-up"></i> 12%
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-md-6 mb-3">
+                    <div class="stat-card active-products">
+                        <div class="stat-icon">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h4>1,850</h4>
+                            <small>محصولات فعال</small>
+                            <span class="text-success">
+                                <i class="fas fa-arrow-up"></i> 8%
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-md-6 mb-3">
+                    <div class="stat-card out-of-stock">
+                        <div class="stat-icon">
+                            <i class="fas fa-exclamation-triangle"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h4>125</h4>
+                            <small>اتمام موجودی</small>
+                            <span class="text-danger">
+                                <i class="fas fa-arrow-up"></i> 15%
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-md-6 mb-3">
+                    <div class="stat-card featured">
+                        <div class="stat-icon">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h4>48</h4>
+                            <small>محصولات ویژه</small>
+                            <span class="text-info">
+                                <i class="fas fa-minus"></i> ثابت
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Action Buttons & Filters -->
+            <div class="products-toolbar">
+                <div class="toolbar-left">
+                    <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addProductModal">
+                        <i class="fas fa-plus me-2"></i>افزودن محصول
+                    </button>
+                    <button class="btn btn-success">
+                        <i class="fas fa-file-excel me-2"></i>ورود گروهی
+                    </button>
+                    <button class="btn btn-info">
+                        <i class="fas fa-download me-2"></i>خروجی Excel
+                    </button>
+                </div>
+                
+                <div class="toolbar-right">
+                    <div class="search-box">
+                        <input type="text" class="form-control" placeholder="جستجو محصولات...">
+                    </div>
+                    <select class="form-select">
+                        <option>همه دسته‌ها</option>
+                        <option>الکترونیک</option>
+                        <option>پوشاک</option>
+                        <option>کتاب</option>
+                        <option>خانه و آشپزخانه</option>
+                    </select>
+                    <button class="btn btn-outline-secondary" onclick="toggleView()">
+                        <i class="fas fa-th-large"></i>
+                    </button>
+                </div>
+            </div>
+            
+
+            <!-- Products Table -->
+            <div class="products-table-wrapper">
+                <div class="table-responsive">
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th width="50">
+                                    <input type="checkbox" class="form-check-input" id="selectAll">
+                                </th>
+                                <th width="80">تصویر</th>
+                                <th>نام محصول</th>
+                                <th>دسته‌بندی</th>
+                                <th>قیمت (تومان)</th>
+                                <th>موجودی</th>
+                                <th width="120">وضعیت</th>
+                                <th width="180">اولویت نمایش</th>
+                                <th width="150">عملیات</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <input type="checkbox" class="form-check-input product-checkbox">
+                                </td>
+                                <td>
+                                    <img src="../img/a75a48fda23ca041993e51beb3598ce8490890d5_1754236726.jpg" alt="محصول" class="product-thumb">
+                                </td>
+                                <td>
+                                    <div class="product-info">
+                                        <strong>لپ تاپ ASUS ROG</strong>
+                                        <small class="text-muted d-block">کد: PRD-1001</small>
+                                    </div>
+                                </td>
+                                <td>الکترونیک / لپ تاپ</td>
+                                <td>
+                                    <div class="price-info">
+                                        <span class="current-price">45,000,000</span>
+                                        <small class="old-price text-muted text-decoration-line-through d-block">48,000,000</small>
+                                    </div>
+                                </td>
+                                <td>
+                                    <span class="stock-badge stock-available">25 عدد</span>
+                                </td>
+                                <td>
+                                    <div class="form-check form-switch">
+                                        <input class="form-check-input" type="checkbox" checked>
+                                        <label class="form-check-label">فعال</label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="priority-controls">
+                                        <select class="form-select form-select-sm priority-select">
+                                            <option value="1">عادی</option>
+                                            <option value="2" selected>ویژه</option>
+                                            <option value="3">پیشنهادی</option>
+                                            <option value="4">پرفروش</option>
+                                        </select>
+                                        <div class="priority-order mt-1">
+                                            <button class="btn btn-sm btn-outline-secondary" title="بالا">
+                                                <i class="fas fa-arrow-up"></i>
+                                            </button>
+                                            <span class="mx-1">5</span>
+                                            <button class="btn btn-sm btn-outline-secondary" title="پایین">
+                                                <i class="fas fa-arrow-down"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="action-buttons">
+                                        <button class="btn btn-sm btn-outline-info" title="مشاهده">
+                                            <i class="fas fa-eye"></i>
+                                        </button>
+                                        <button class="btn btn-sm btn-outline-primary" title="ویرایش">
+                                            <i class="fas fa-edit"></i>
+                                        </button>
+                                        <button class="btn btn-sm btn-outline-danger" title="حذف">
+                                            <i class="fas fa-trash"></i>
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+                            
+                            <!-- محصول دوم -->
+                            <tr>
+                                <td>
+                                    <input type="checkbox" class="form-check-input product-checkbox">
+                                </td>
+                                <td>
+                                    <img src="../img/small_product-TLP-59177_9d9b7e4a-7e12-4787-bd8a-4afe9326bac3.webp" alt="محصول" class="product-thumb">
+                                </td>
+                                <td>
+                                    <div class="product-info">
+                                        <strong>گوشی Samsung S23</strong>
+                                        <small class="text-muted d-block">کد: PRD-1002</small>
+                                    </div>
+                                </td>
+                                <td>الکترونیک / موبایل</td>
+                                <td>
+                                    <div class="price-info">
+                                        <span class="current-price">38,500,000</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <span class="stock-badge stock-low">3 عدد</span>
+                                </td>
+                                <td>
+                                    <div class="form-check form-switch">
+                                        <input class="form-check-input" type="checkbox" checked>
+                                        <label class="form-check-label">فعال</label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="priority-controls">
+                                        <select class="form-select form-select-sm priority-select">
+                                            <option value="1">عادی</option>
+                                            <option value="2">ویژه</option>
+                                            <option value="3">پیشنهادی</option>
+                                            <option value="4" selected>پرفروش</option>
+                                        </select>
+                                        <div class="priority-order mt-1">
+                                            <button class="btn btn-sm btn-outline-secondary" title="بالا">
+                                                <i class="fas fa-arrow-up"></i>
+                                            </button>
+                                            <span class="mx-1">1</span>
+                                            <button class="btn btn-sm btn-outline-secondary" title="پایین">
+                                                <i class="fas fa-arrow-down"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="action-buttons">
+                                        <button class="btn btn-sm btn-outline-info" title="مشاهده">
+                                            <i class="fas fa-eye"></i>
+                                        </button>
+                                        <button class="btn btn-sm btn-outline-primary" title="ویرایش">
+                                            <i class="fas fa-edit"></i>
+                                        </button>
+                                        <button class="btn btn-sm btn-outline-danger" title="حذف">
+                                            <i class="fas fa-trash"></i>
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <!-- محصول سوم - اتمام موجودی -->
+                            <tr class="out-of-stock-row">
+                                <td>
+                                    <input type="checkbox" class="form-check-input product-checkbox">
+                                </td>
+                                <td>
+                                    <img src="../img/small_product-TLP-36576_a787b0ef-93f7-4c3d-8c52-05a587df2abf.webp" alt="محصول" class="product-thumb">
+                                </td>
+                                <td>
+                                    <div class="product-info">
+                                        <strong>هدفون بی‌سیم Sony</strong>
+                                        <small class="text-muted d-block">کد: PRD-1003</small>
+                                    </div>
+                                </td>
+                                <td>الکترونیک / صوتی</td>
+                                <td>
+                                    <div class="price-info">
+                                        <span class="current-price">2,850,000</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <span class="stock-badge stock-out">اتمام موجودی</span>
+                                </td>
+                                <td>
+                                    <div class="form-check form-switch">
+                                        <input class="form-check-input" type="checkbox">
+                                        <label class="form-check-label">غیرفعال</label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="priority-controls">
+                                        <select class="form-select form-select-sm priority-select" disabled>
+                                            <option value="1" selected>عادی</option>
+                                            <option value="2">ویژه</option>
+                                            <option value="3">پیشنهادی</option>
+                                            <option value="4">پرفروش</option>
+                                        </select>
+                                        <div class="priority-order mt-1">
+                                            <button class="btn btn-sm btn-outline-secondary" disabled>
+                                                <i class="fas fa-arrow-up"></i>
+                                            </button>
+                                            <span class="mx-1">-</span>
+                                            <button class="btn btn-sm btn-outline-secondary" disabled>
+                                                <i class="fas fa-arrow-down"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="action-buttons">
+                                        <button class="btn btn-sm btn-outline-info" title="مشاهده">
+                                            <i class="fas fa-eye"></i>
+                                        </button>
+                                        <button class="btn btn-sm btn-outline-primary" title="ویرایش">
+                                            <i class="fas fa-edit"></i>
+                                        </button>
+                                        <button class="btn btn-sm btn-outline-danger" title="حذف">
+                                            <i class="fas fa-trash"></i>
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Batch Actions -->
+                <div class="batch-actions mt-3" id="batchActions" style="display: none;">
+                    <div class="d-flex align-items-center gap-3">
+                        <span class="selected-count">0 محصول انتخاب شده</span>
+                        <button class="btn btn-sm btn-outline-success">فعال کردن</button>
+                        <button class="btn btn-sm btn-outline-warning">غیرفعال کردن</button>
+                        <button class="btn btn-sm btn-outline-danger">حذف گروهی</button>
+                        <select class="form-select form-select-sm" style="width: auto;">
+                            <option>تغییر دسته‌بندی</option>
+                            <option>الکترونیک</option>
+                            <option>پوشاک</option>
+                            <option>کتاب</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Pagination -->
+                <div class="d-flex justify-content-between align-items-center mt-4">
+                    <div class="pagination-info">
+                        نمایش 1 تا 10 از 2,450 محصول
+                    </div>
+                    <nav>
+                        <ul class="pagination mb-0">
+                            <li class="page-item disabled">
+                                <a class="page-link" href="#"><i class="fas fa-chevron-right"></i></a>
+                            </li>
+                            <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                            <li class="page-item"><a class="page-link" href="#">...</a></li>
+                            <li class="page-item"><a class="page-link" href="#">245</a></li>
+                            <li class="page-item">
+                                <a class="page-link" href="#"><i class="fas fa-chevron-left"></i></a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Add Product Modal -->
+    <div class="modal fade" id="addProductModal" tabindex="-1">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content product-modal">
+                <div class="modal-header">
+                    <h5 class="modal-title">افزودن محصول جدید</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="row">
+                            <!-- اطلاعات پایه -->
+                            <div class="col-md-8">
+                                <h6 class="mb-3">اطلاعات پایه</h6>
+                                <div class="mb-3">
+                                    <label class="form-label">نام محصول</label>
+                                    <input type="text" class="form-control" placeholder="نام محصول را وارد کنید">
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label">توضیحات کوتاه</label>
+                                    <textarea class="form-control" rows="3" placeholder="توضیحات مختصر محصول"></textarea>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label">توضیحات کامل</label>
+                                    <textarea class="form-control" rows="5" placeholder="توضیحات کامل محصول"></textarea>
+                                </div>
+                            </div>
+
+                            <!-- تصاویر -->
+                            <div class="col-md-4">
+                                <h6 class="mb-3">تصاویر محصول</h6>
+                                <div class="image-upload-area">
+                                    <div class="main-image-upload mb-3">
+                                        <label class="form-label">تصویر اصلی</label>
+                                        <div class="upload-box">
+                                            <i class="fas fa-cloud-upload-alt"></i>
+                                            <p>کلیک کنید یا تصویر را بکشید</p>
+                                            <input type="file" accept="image/*" hidden>
+                                        </div>
+                                    </div>
+                                    <div class="gallery-upload">
+                                        <label class="form-label">گالری تصاویر</label>
+                                        <div class="upload-box-small">
+                                            <i class="fas fa-plus"></i>
+                                            <input type="file" accept="image/*" multiple hidden>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <hr class="my-4">
+
+                        <div class="product-details-grid">
+                            <!-- قیمت و موجودی -->
+                            <div class="price-inventory-section">
+                                <h6 class="section-title">قیمت و موجودی</h6>
+                                <div class="price-grid">
+                                    <div class="form-group">
+                                        <label class="form-label">قیمت اصلی</label>
+                                        <div class="input-wrapper">
+                                            <input type="number" class="form-control" placeholder="0">
+                                            <span class="currency">تومان</span>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label class="form-label">قیمت با تخفیف</label>
+                                        <div class="input-wrapper">
+                                            <input type="number" class="form-control" placeholder="0">
+                                            <span class="currency">تومان</span>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label class="form-label">موجودی</label>
+                                        <div class="input-wrapper">
+                                            <input type="number" class="form-control" placeholder="0">
+                                            <span class="unit">عدد</span>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label class="form-label">کد محصول</label>
+                                        <div class="input-wrapper">
+                                            <input type="text" class="form-control" placeholder="PRD-001">
+                                            <span class="prefix-icon">📋</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        
+                            <!-- دسته‌بندی -->
+                            <div class="category-section">
+                                <h6 class="section-title">دسته‌بندی و برچسب‌ها</h6>
+                                <div class="category-grid">
+                                    <div class="form-group">
+                                        <label class="form-label">دسته اصلی</label>
+                                        <select class="form-select">
+                                            <option value="">انتخاب کنید</option>
+                                            <option value="electronics">📱 الکترونیک</option>
+                                            <option value="clothing">👕 پوشاک</option>
+                                            <option value="books">📚 کتاب</option>
+                                            <option value="home">🏠 خانه و آشپزخانه</option>
+                                        </select>
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label class="form-label">زیردسته</label>
+                                        <select class="form-select">
+                                            <option value="">انتخاب کنید</option>
+                                            <option value="laptop">💻 لپ تاپ</option>
+                                            <option value="mobile">📱 موبایل</option>
+                                            <option value="tablet">📲 تبلت</option>
+                                            <option value="accessories">🔌 لوازم جانبی</option>
+                                        </select>
+                                    </div>
+                                    
+                                    <div class="form-group full-width">
+                                        <label class="form-label">برچسب‌ها</label>
+                                        <div class="tags-input-wrapper">
+                                            <input type="text" class="form-control tags-input" placeholder="برچسب‌ها را با کاما جدا کنید">
+                                            <span class="tags-hint">🏷️</span>
+                                        </div>
+                                        <small class="form-text">مثال: جدید, پرفروش, تخفیف ویژه</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+
+                        <hr class="my-4">
+
+                        <!-- اولویت نمایش -->
+                        <div class="priority-settings">
+                            <h6 class="mb-3">تنظیمات اولویت نمایش</h6>
+                            <div class="row">
+                                <div class="col-md-4 mb-3">
+                                    <label class="form-label">نوع نمایش</label>
+                                    <select class="form-select">
+                                        <option value="1">عادی</option>
+                                        <option value="2">ویژه</option>
+                                        <option value="3">پیشنهادی</option>
+                                        <option value="4">پرفروش</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-4 mb-3">
+                                    <label class="form-label">اولویت در دسته</label>
+                                    <input type="number" class="form-control" placeholder="1-100" min="1" max="100">
+                                </div>
+                                <div class="col-md-4 mb-3">
+                                    <label class="form-label">نمایش در صفحه اصلی</label>
+                                    <div class="form-check form-switch mt-2">
+                                        <input class="form-check-input" type="checkbox" id="showInHome">
+                                        <label class="form-check-label" for="showInHome">
+                                            نمایش در صفحه اصلی
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="advanced-priority mt-3">
+                                <h6 class="mb-3">موقعیت‌های نمایش</h6>
+                                <div class="priority-items">
+                                    <div class="priority-item">
+                                        <div class="priority-check">
+                                            <input class="form-check-input" type="checkbox" id="slider">
+                                            <label class="form-check-label" for="slider">اسلایدر صفحه اصلی</label>
+                                        </div>
+                                        <div class="priority-input">
+                                            <label class="priority-label">اولویت:</label>
+                                            <input type="number" class="form-control priority-number" value="1" min="1" max="100">
+                                        </div>
+                                    </div>
+                            
+                                    <div class="priority-item">
+                                        <div class="priority-check">
+                                            <input class="form-check-input" type="checkbox" id="featured">
+                                            <label class="form-check-label" for="featured">محصولات ویژه</label>
+                                        </div>
+                                        <div class="priority-input">
+                                            <label class="priority-label">اولویت:</label>
+                                            <input type="number" class="form-control priority-number" value="1" min="1" max="100">
+                                        </div>
+                                    </div>
+                            
+                                    <div class="priority-item">
+                                        <div class="priority-check">
+                                            <input class="form-check-input" type="checkbox" id="bestseller">
+                                            <label class="form-check-label" for="bestseller">پرفروش‌ترین‌ها</label>
+                                        </div>
+                                        <div class="priority-input">
+                                            <label class="priority-label">اولویت:</label>
+                                            <input type="number" class="form-control priority-number" value="1" min="1" max="100">
+                                        </div>
+                                    </div>
+                            
+                                    <div class="priority-item">
+                                        <div class="priority-check">
+                                            <input class="form-check-input" type="checkbox" id="newProducts">
+                                            <label class="form-check-label" for="newProducts">محصولات جدید</label>
+                                        </div>
+                                        <div class="priority-input">
+                                            <label class="priority-label">اولویت:</label>
+                                            <input type="number" class="form-control priority-number" value="1" min="1" max="100">
+                                        </div>
+                                    </div>
+                            
+                                    <div class="priority-item">
+                                        <div class="priority-check">
+                                            <input class="form-check-input" type="checkbox" id="deals">
+                                            <label class="form-check-label" for="deals">پیشنهادات ویژه</label>
+                                        </div>
+                                        <div class="priority-input">
+                                            <label class="priority-label">اولویت:</label>
+                                            <input type="number" class="form-control priority-number" value="1" min="1" max="100">
+                                        </div>
+                                    </div>
+                            
+                                    <div class="priority-item">
+                                        <div class="priority-check">
+                                            <input class="form-check-input" type="checkbox" id="related">
+                                            <label class="form-check-label" for="related">محصولات مرتبط</label>
+                                        </div>
+                                        <div class="priority-input">
+                                            <label class="priority-label">اولویت:</label>
+                                            <input type="number" class="form-control priority-number" value="1" min="1" max="100">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>                            
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">انصراف</button>
+                    <button type="button" class="btn btn-primary">ذخیره محصول</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- مودال مشاهده محصول -->
+    <div class="modal fade" id="viewProductModal" tabindex="-1" aria-labelledby="viewProductModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="viewProductModalLabel">جزئیات محصول</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <!-- تصویر محصول -->
+                        <div class="col-md-4">
+                            <img src="../img/a75a48fda23ca041993e51beb3598ce8490890d5_1754236726.jpg" 
+                                alt="محصول" class="img-fluid rounded border" id="productImage">
+                        </div>
+                        
+                        <!-- اطلاعات محصول -->
+                        <div class="col-md-8">
+                            <div class="product-details">
+                                <h4 class="product-title mb-3" id="productTitle">لپ تاپ ASUS ROG</h4>
+                                
+                                <div class="row mb-3">
+                                    <div class="col-6">
+                                        <strong>کد محصول:</strong>
+                                        <span id="productCode">PRD-1001</span>
+                                    </div>
+                                    <div class="col-6">
+                                        <strong>دسته‌بندی:</strong>
+                                        <span id="productCategory">الکترونیک / لپ تاپ</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="row mb-3">
+                                    <div class="col-6">
+                                        <strong>قیمت:</strong>
+                                        <div class="price-display">
+                                            <span class="current-price text-success fs-5" id="currentPrice">45,000,000 تومان</span>
+                                            <small class="old-price text-muted text-decoration-line-through d-block" id="oldPrice">48,000,000 تومان</small>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <strong>موجودی:</strong>
+                                        <span class="badge bg-success" id="stockStatus">25 عدد</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="row mb-3">
+                                    <div class="col-6">
+                                        <strong>وضعیت:</strong>
+                                        <span class="badge bg-success" id="productStatus">فعال</span>
+                                    </div>
+                                    <div class="col-6">
+                                        <strong>اولویت:</strong>
+                                        <span class="badge bg-warning" id="productPriority">ویژه</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="mb-3">
+                                    <strong>توضیحات:</strong>
+                                    <p class="text-muted mt-2" id="productDescription">
+                                        لپ تاپ گیمینگ با پردازنده قدرتمند و کارت گرافیک مناسب برای بازی و کارهای گرافیکی
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- اطلاعات اضافی -->
+                    <div class="row mt-4">
+                        <div class="col-12">
+                            <ul class="nav nav-tabs" id="productTabs" role="tablist">
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link active" id="specs-tab" data-bs-toggle="tab" data-bs-target="#specs" type="button">مشخصات</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="sales-tab" data-bs-toggle="tab" data-bs-target="#sales" type="button">فروش</button>
+                                </li>
+                            </ul>
+                            <div class="tab-content mt-3" id="productTabsContent">
+                                <div class="tab-pane fade show active" id="specs" role="tabpanel">
+                                    <div class="table-responsive">
+                                        <table class="table table-sm">
+                                            <tr><td><strong>برند:</strong></td><td>ASUS</td></tr>
+                                            <tr><td><strong>مدل:</strong></td><td>ROG Strix G15</td></tr>
+                                            <tr><td><strong>پردازنده:</strong></td><td>Intel Core i7</td></tr>
+                                            <tr><td><strong>رم:</strong></td><td>16 گیگابایت</td></tr>
+                                            <tr><td><strong>ذخیره‌سازی:</strong></td><td>512 گیگابایت SSD</td></tr>
+                                        </table>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="sales" role="tabpanel">
+                                    <div class="row text-center">
+                                        <div class="col-4">
+                                            <h5 class="text-primary">125</h5>
+                                            <small class="text-muted">کل فروش</small>
+                                        </div>
+                                        <div class="col-4">
+                                            <h5 class="text-success">15</h5>
+                                            <small class="text-muted">این ماه</small>
+                                        </div>
+                                        <div class="col-4">
+                                            <h5 class="text-warning">4.5</h5>
+                                            <small class="text-muted">امتیاز</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" onclick="editProduct()">
+                        <i class="fas fa-edit me-2"></i>ویرایش
+                    </button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">بستن</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- مودال ویرایش محصول -->
+    <div class="modal fade" id="editProductModal" tabindex="-1" aria-labelledby="editProductModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="editProductModalLabel">ویرایش محصول</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <!-- HTML بهینه شده با گرید -->
+                <div class="modal-body">
+                    <form id="editProductForm">
+                        <div class="edit-form-grid">
+                            <!-- بخش تصاویر -->
+                            <div class="image-upload-section">
+                                <label class="form-label fw-bold">تصاویر محصول</label>
+                                <div class="current-image">
+                                    <img src="../img/a75a48fda23ca041993e51beb3598ce8490890d5_1754236726.jpg" alt="محصول" class="img-fluid rounded border" id="editProductImage">
+                                </div>
+                                <div class="upload-area text-center">
+                                    <i class="fas fa-cloud-upload-alt fa-2x text-muted mb-2"></i>
+                                    <p class="text-muted mb-2">فایل را اینجا بکشید یا کلیک کنید</p>
+                                    <input type="file" class="form-control" accept="image/*" multiple>
+                                </div>
+                            </div>
+                            
+                            <!-- اطلاعات اصلی -->
+                            <div class="main-info-section">
+                                <div class="info-grid">
+                                    <div>
+                                        <label class="form-label fw-bold">نام محصول <span class="text-danger">*</span></label>
+                                        <input type="text" class="form-control" id="editProductName" value="لپ تاپ ASUS ROG" required>
+                                    </div>
+                                    <div>
+                                        <label class="form-label fw-bold">کد محصول</label>
+                                        <input type="text" class="form-control" id="editProductCode" value="PRD-1001" readonly>
+                                    </div>
+                                </div>
+                                
+                                <div class="category-brand-grid">
+                                    <div>
+                                        <label class="form-label fw-bold">دسته‌بندی <span class="text-danger">*</span></label>
+                                        <select class="form-select" id="editProductCategory" required>
+                                            <option value="">انتخاب دسته‌بندی</option>
+                                            <option value="electronics-laptop" selected>الکترونیک / لپ تاپ</option>
+                                            <option value="electronics-mobile">الکترونیک / موبایل</option>
+                                            <option value="electronics-audio">الکترونیک / صوتی</option>
+                                            <option value="clothing">پوشاک</option>
+                                            <option value="books">کتاب</option>
+                                        </select>
+                                    </div>
+                                    <div>
+                                        <label class="form-label fw-bold">برند</label>
+                                        <input type="text" class="form-control" id="editProductBrand" value="ASUS">
+                                    </div>
+                                </div>
+                                
+                                <div class="price-grid">
+                                    <div>
+                                        <label class="form-label fw-bold">قیمت فعلی <span class="text-danger">*</span></label>
+                                        <input type="number" class="form-control" id="editCurrentPrice" value="45000000" required>
+                                    </div>
+                                    <div>
+                                        <label class="form-label fw-bold">قیمت قبلی</label>
+                                        <input type="number" class="form-control" id="editOldPrice" value="48000000">
+                                    </div>
+                                    <div>
+                                        <label class="form-label fw-bold">موجودی <span class="text-danger">*</span></label>
+                                        <input type="number" class="form-control" id="editStock" value="25" min="0" required>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- تب‌های اطلاعات تکمیلی -->
+                        <div class="tabs-section">
+                            <ul class="nav nav-tabs" id="editTabs" role="tablist">
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link active" id="details-tab" data-bs-toggle="tab" data-bs-target="#details" type="button">جزئیات</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="specifications-tab" data-bs-toggle="tab" data-bs-target="#specifications" type="button">مشخصات</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="settings-tab" data-bs-toggle="tab" data-bs-target="#settings" type="button">تنظیمات</button>
+                                </li>
+                            </ul>
+                            
+                            <div class="tab-content" id="editTabsContent">
+                                <!-- تب جزئیات -->
+                                <div class="tab-pane fade show active" id="details" role="tabpanel">
+                                    <div class="details-grid">
+                                        <div class="description-grid">
+                                            <div>
+                                                <label class="form-label fw-bold">توضیحات کوتاه</label>
+                                                <textarea class="form-control" rows="3" id="editShortDescription">لپ تاپ گیمینگ با پردازنده قدرتمند و کارت گرافیک مناسب برای بازی و کارهای گرافیکی</textarea>
+                                            </div>
+                                            <div>
+                                                <label class="form-label fw-bold">توضیحات کامل</label>
+                                                <textarea class="form-control" rows="5" id="editFullDescription">توضیحات کامل محصول...</textarea>
+                                            </div>
+                                        </div>
+                                        <div class="meta-grid">
+                                            <div>
+                                                <label class="form-label fw-bold">کلمات کلیدی (SEO)</label>
+                                                <input type="text" class="form-control" id="editKeywords" placeholder="لپ تاپ, گیمینگ, ASUS">
+                                            </div>
+                                            <div>
+                                                <label class="form-label fw-bold">وزن (گرم)</label>
+                                                <input type="number" class="form-control" id="editWeight" value="2500">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- تب مشخصات -->
+                                <div class="tab-pane fade" id="specifications" role="tabpanel">
+                                    <div id="specificationsContainer">
+                                        <div class="spec-row">
+                                            <div class="spec-grid">
+                                                <input type="text" class="form-control" placeholder="نام مشخصه" value="پردازنده">
+                                                <input type="text" class="form-control" placeholder="مقدار" value="Intel Core i7">
+                                                <button type="button" class="btn remove-spec">
+                                                    <i class="fas fa-times"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div class="spec-row">
+                                            <div class="spec-grid">
+                                                <input type="text" class="form-control" placeholder="نام مشخصه" value="رم">
+                                                <input type="text" class="form-control" placeholder="مقدار" value="16 گیگابایت">
+                                                <button type="button" class="btn remove-spec">
+                                                    <i class="fas fa-times"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button type="button" class="btn" id="addSpecification">
+                                        <i class="fas fa-plus me-1"></i>افزودن مشخصه
+                                    </button>
+                                </div>
+                                
+                                <!-- تب تنظیمات -->
+                                <div class="tab-pane fade" id="settings" role="tabpanel">
+                                    <div class="settings-grid">
+                                        <div class="settings-row">
+                                            <label class="form-label fw-bold">وضعیت محصول</label>
+                                            <div class="form-check form-switch">
+                                                <input class="form-check-input" type="checkbox" id="editProductStatus" checked>
+                                                <label class="form-check-label" for="editProductStatus">فعال</label>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="settings-row">
+                                            <label class="form-label fw-bold">اولویت نمایش</label>
+                                            <select class="form-select" id="editPriority">
+                                                <option value="1">عادی</option>
+                                                <option value="2" selected>ویژه</option>
+                                                <option value="3">پیشنهادی</option>
+                                                <option value="4">پرفروش</option>
+                                            </select>
+                                        </div>
+                                        
+                                        <div class="settings-row">
+                                            <label class="form-label fw-bold">ترتیب نمایش</label>
+                                            <input type="number" class="form-control" id="editDisplayOrder" value="5" min="0">
+                                        </div>
+                                        
+                                        <div class="settings-row">
+                                            <label class="form-label fw-bold">حداقل موجودی</label>
+                                            <input type="number" class="form-control" id="editMinStock" value="5" min="0">
+                                        </div>
+                                        
+                                        <div class="checkboxes-section">
+                                            <div class="checkbox-grid">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" id="editFeatured">
+                                                    <label class="form-check-label" for="editFeatured">محصول ویژه</label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" id="editDiscountable" checked>
+                                                    <label class="form-check-label" for="editDiscountable">قابل تخفیف</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-success" onclick="saveProduct()">
+                        <i class="fas fa-save me-2"></i>ذخیره تغییرات
+                    </button>
+                    <button type="button" class="btn btn-outline-secondary" onclick="resetForm()">
+                        <i class="fas fa-undo me-2"></i>بازنشانی
+                    </button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">انصراف</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="../js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+    
+    <script>
+        // JavaScript برای باز کردن مودال
+        function viewProduct(productData) {
+            // پر کردن اطلاعات مودال
+            document.getElementById('productTitle').textContent = productData.name;
+            document.getElementById('productCode').textContent = productData.code;
+            document.getElementById('productCategory').textContent = productData.category;
+            document.getElementById('currentPrice').textContent = productData.price + ' تومان';
+            document.getElementById('productImage').src = productData.image;
+            
+            // نمایش مودال
+            const modal = new bootstrap.Modal(document.getElementById('viewProductModal'));
+            modal.show();
+        }
+
+        // اتصال به دکمه مشاهده
+        document.querySelectorAll('.btn-outline-info').forEach(btn => {
+            btn.addEventListener('click', function() {
+                // گرفتن اطلاعات از ردیف جدول
+                const row = this.closest('tr');
+                const productData = {
+                    name: row.querySelector('.product-info strong').textContent,
+                    code: row.querySelector('.product-info small').textContent.replace('کد: ', ''),
+                    category: row.cells[3].textContent,
+                    price: row.querySelector('.current-price').textContent,
+                    image: row.querySelector('.product-thumb').src
+                };
+                
+                viewProduct(productData);
+            });
+        });
+
+        // تابع ویرایش
+        function editProduct() {
+            // بستن مودال مشاهده
+            bootstrap.Modal.getInstance(document.getElementById('viewProductModal')).hide();
+            
+            // باز کردن مودال ویرایش (اگر داری)
+            console.log('باز کردن ویرایش محصول');
+        }
+        // JavaScript برای مودال ویرایش
+function editProduct(productData = null) {
+    // بستن مودال مشاهده اگر باز باشد
+    const viewModal = bootstrap.Modal.getInstance(document.getElementById('viewProductModal'));
+    if (viewModal) {
+        viewModal.hide();
+    }
+    
+    // اگر داده‌ای ارسال شده، فرم را پر کن
+    if (productData) {
+        populateEditForm(productData);
+    }
+    
+    // نمایش مودال ویرایش
+    const editModal = new bootstrap.Modal(document.getElementById('editProductModal'));
+    editModal.show();
+}
+
+// پر کردن فرم ویرایش با داده‌های محصول
+function populateEditForm(data) {
+    document.getElementById('editProductName').value = data.name || '';
+    document.getElementById('editProductCode').value = data.code || '';
+    document.getElementById('editCurrentPrice').value = data.price || '';
+    document.getElementById('editProductImage').src = data.image || '';
+    
+    // سایر فیلدها...
+}
+
+// اتصال به دکمه‌های ویرایش در جدول
+document.querySelectorAll('.btn-outline-primary').forEach(btn => {
+    btn.addEventListener('click', function() {
+        const row = this.closest('tr');
+        const productData = {
+            name: row.querySelector('.product-info strong').textContent,
+            code: row.querySelector('.product-info small').textContent.replace('کد: ', ''),
+            price: row.querySelector('.current-price').textContent.replace(/[^0-9]/g, ''),
+            image: row.querySelector('.product-thumb').src
+        };
+        
+        editProduct(productData);
+    });
+});
+
+// افزودن مشخصه جدید
+document.getElementById('addSpecification').addEventListener('click', function() {
+    const container = document.getElementById('specificationsContainer');
+    const newSpec = document.createElement('div');
+    newSpec.className = 'row mb-3 spec-row';
+    newSpec.innerHTML = `
+        <div class="col-md-4">
+            <input type="text" class="form-control" placeholder="نام مشخصه">
+        </div>
+        <div class="col-md-7">
+            <input type="text" class="form-control" placeholder="مقدار">
+        </div>
+        <div class="col-md-1">
+            <button type="button" class="btn btn-outline-danger btn-sm remove-spec">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+    `;
+    container.appendChild(newSpec);
+    });
+
+    // حذف مشخصه
+    document.addEventListener('click', function(e) {
+        if (e.target.closest('.remove-spec')) {
+            e.target.closest('.spec-row').remove();
+        }
+    });
+
+    // ذخیره محصول
+    function saveProduct() {
+        const form = document.getElementById('editProductForm');
+        if (form.checkValidity()) {
+            // ارسال داده‌ها به سرور
+            console.log('ذخیره محصول...');
+            
+            // بستن مودال
+            bootstrap.Modal.getInstance(document.getElementById('editProductModal')).hide();
+            
+            // نمایش پیام موفقیت
+            showToast('محصول با موفقیت ویرایش شد!', 'success');
+        } else {
+            form.reportValidity();
+        }
+    }
+
+    // بازنشانی فرم
+    function resetForm() {
+        document.getElementById('editProductForm').reset();
+    }
+
+    // تابع نمایش Toast
+    function showToast(message, type = 'info') {
+        // پیاده‌سازی Toast notification
+        console.log(`${type}: ${message}`);
+    }
+    </script>
+    
+</body>
+</html>
