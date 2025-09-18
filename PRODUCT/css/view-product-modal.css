@@ -1,0 +1,57 @@
+.modal-content {
+    border-radius: 12px;
+}
+
+.modal-header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border-radius: 12px 12px 0 0;
+}
+
+.tab-content {
+    border: 1px solid #dee2e6;
+    border-radius: 0 0 8px 8px;
+    padding: 1rem;
+    background: #f8f9fa;
+}
+
+.modal-header .btn-close {
+    filter: invert(1);
+}
+
+.modal-header .btn-close {
+    margin-left: 0;
+    margin-right: auto;
+    filter: invert(1);
+}
+
+.nav-tabs .nav-link {
+    border: none;
+    color: #6c757d;
+}
+
+.nav-tabs .nav-link.active {
+    background: #007bff;
+    color: white;
+    border-radius: 8px 8px 0 0;
+}
+
+.price-display .current-price {
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.product-details .row {
+    margin-bottom: 0.5rem;
+}
+
+
+
+@media (max-width: 768px) {
+    .modal-lg {
+        max-width: 95%;
+    }
+    .modal-body .row > div {
+        margin-bottom: 1rem;
+    }
+}

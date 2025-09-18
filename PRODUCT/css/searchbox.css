@@ -1,0 +1,92 @@
+.form-select {
+    direction: rtl;
+    text-align: right;
+}
+
+.form-select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m1 6 7 7 7-7'/%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: left 0.75rem center;
+    background-size: 16px 12px;
+    padding-left: 2.25rem;
+    padding-right: 0.75rem;
+}
+
+.form-select::-ms-expand {
+    display: none;
+}
+
+.products-toolbar {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 1rem;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.form-select option {
+    direction: rtl;
+    text-align: right;
+}
+
+.products-toolbar .btn {
+    white-space: nowrap;
+    font-size: 0.875rem;
+}
+
+.products-toolbar .form-select {
+    min-width: 140px;
+}
+
+.products-toolbar .search-box {
+    flex: 1;
+    max-width: 300px;
+    min-width: 200px;
+}
+
+.products-toolbar .toolbar-left, .products-toolbar .toolbar-right {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.products-toolbar .toolbar-right {
+    justify-content: flex-end;
+}
+
+
+
+@media (max-width: 992px) {
+    .products-toolbar {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    .products-toolbar .toolbar-right {
+        justify-content: flex-start;
+    }
+    .products-toolbar .search-box {
+        order: -1;
+        max-width: 100%;
+        margin-bottom: 0.5rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .products-toolbar .toolbar-left,
+    .products-toolbar .toolbar-right {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0.5rem;
+    }
+    .products-toolbar .btn {
+        font-size: 0.8rem;
+        padding: 0.4rem 0.75rem;
+    }
+    .products-toolbar .form-select {
+        min-width: auto;
+    }
+}
