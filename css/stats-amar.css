@@ -1,0 +1,258 @@
+.stat-card {
+    background: white;
+    border-radius: 10px;
+    padding: 18px;
+    border: 1px solid #f0f0f0;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    height: 120px;
+    display: flex;
+    align-items: center;
+}
+
+.stat-card.growth::before {
+    background: #6f42c1;
+}
+
+.stat-card.orders::before {
+    background: #28a745;
+}
+
+.stat-card.revenue::before {
+    background: #ffc107;
+}
+
+.stat-card.users::before {
+    background: #17a2b8;
+}
+
+.stat-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 4px;
+    height: 100%;
+    background: var(--primary-blue);
+    transition: width 0.3s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0,102,204,0.15);
+}
+
+.stat-card:hover::before {
+    width: 6px;
+}
+
+.stat-icon {
+    width: 45px;
+    height: 45px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--light-blue);
+    color: var(--primary-blue);
+    margin-left: 15px;
+    flex-shrink: 0;
+}
+
+.stat-info {
+    flex: 1;
+}
+
+.stats-content {
+    padding: 20px;
+    transition: all 0.4s ease;
+    max-height: 300px;
+    overflow: hidden;
+}
+
+.stats-content.collapsed {
+    max-height: 0;
+    padding: 0 20px;
+    opacity: 0;
+}
+
+.stats-header {
+    display: flex;
+    justify-content: between;
+    align-items: center;
+    padding: 15px 20px;
+    border-bottom: 1px solid #eee;
+    background: linear-gradient(135deg, #f8f9ff, #fff);
+}
+
+.stats-section {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    margin-bottom: 25px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.toggle-stats {
+    border: none;
+    background: transparent;
+    color: var(--primary-blue);
+    transition: all 0.3s ease;
+    margin-right: 10px;
+}
+
+.toggle-stats:hover {
+    background: var(--light-blue);
+}
+
+.stat-card.growth .stat-icon {
+    background: rgba(111, 66, 193, 0.1);
+    color: #6f42c1;
+}
+
+.stat-card.orders .stat-icon {
+    background: rgba(40, 167, 69, 0.1);
+    color: #28a745;
+}
+
+.stat-card.revenue .stat-icon {
+    background: rgba(255, 193, 7, 0.1);
+    color: #ffc107;
+}
+
+.stat-card.users .stat-icon {
+    background: rgba(23, 162, 184, 0.1);
+    color: #17a2b8;
+}
+
+.stat-icon i {
+    font-size: 20px;
+}
+
+.stat-info h4 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin: 0;
+    color: var(--dark-blue);
+    line-height: 1.2;
+}
+
+.stat-info small {
+    font-size: 0.75rem;
+    display: block;
+    margin-top: 5px;
+    font-weight: 600;
+}
+
+.stat-info span {
+    font-size: 0.85rem;
+    color: #666;
+    display: block;
+    margin-top: 2px;
+    font-weight: 500;
+}
+
+.stats-header h5 {
+    margin: 0;
+    color: var(--primary-blue);
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.toggle-stats i {
+    transition: transform 0.4s ease;
+    display: inline-block;
+}
+
+.toggle-stats.collapsed i {
+    transform: rotate(180deg);
+}
+
+
+
+@keyframes slideDown {
+    from {
+        max-height: 0;
+        opacity: 0;
+    }
+    to {
+        max-height: 300px;
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        max-height: 300px;
+        opacity: 1;
+    }
+    to {
+        max-height: 0;
+        opacity: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .stat-card {
+        height: 90px; 
+        padding: 10px;
+        margin-bottom: 8px;
+    }
+    .stat-icon {
+        width: 35px;
+        height: 35px;
+        margin-left: 8px;
+        border-radius: 8px;
+    }
+    .stat-icon i {
+        font-size: 14px;
+    }
+    .stat-info h4 {
+        font-size: 1.2rem;
+        line-height: 1.1;
+    }
+    .stat-info span {
+        font-size: 0.7rem;
+        margin-top: 1px;
+    }
+    .stat-info small {
+        font-size: 0.65rem;
+        margin-top: 2px;
+    }
+    .stats-content {
+        padding: 10px;
+    }
+    .row.g-2 {
+        --bs-gutter-x: 0.5rem;
+        --bs-gutter-y: 0.5rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .stat-card {
+        height: 80px;
+        padding: 8px;
+    }
+    .stat-icon {
+        width: 30px;
+        height: 30px;
+        margin-left: 6px;
+    }
+    .stat-icon i {
+        font-size: 12px;
+    }
+    .stat-info h4 {
+        font-size: 1rem;
+    }
+    .stat-info span {
+        font-size: 0.65rem;
+    }
+    .stat-info small {
+        font-size: 0.6rem;
+    }
+    .stats-content {
+        padding: 8px;
+    }
+}
